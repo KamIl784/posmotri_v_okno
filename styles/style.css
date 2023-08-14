@@ -146,7 +146,7 @@ label .search-form__pseudo-checkbox {
 .search-form__pseudo-checkbox::before {
   content: "";
   display: block;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -160,6 +160,15 @@ label .search-form__pseudo-checkbox {
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   opacity: 1;
 }
+
+.search-form__pseudo-checkbox:hover {
+  cursor: pointer;
+}
+
+.search-form__pseudo-checkbox:hover + .search-form__label-text {
+  text-decoration: underline;
+}
+
 
 .search-form__textfield {
   margin-top: 5px;
@@ -304,7 +313,7 @@ label .search-form__pseudo-checkbox {
   width: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: right center;
+  object-position: center;
 }
 
 img {
